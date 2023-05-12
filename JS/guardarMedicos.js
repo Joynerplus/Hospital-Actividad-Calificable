@@ -6,12 +6,12 @@ formularioMedicos.addEventListener('submit',(event) => {
         nombreMedico: document.getElementById('nombre').value,
         apellidoMedico: document.getElementById('apellido').value,
         numeroCedula: document.getElementById('cedula').value,
-        especialidadRequerida: document.getElementById('especialidadRequerida').value,
+        especialidadMedico: document.getElementById('especialidadMedico').value,
         numeroConsultorio: document.getElementById('consultorio').value,
         email: document.getElementById('email').value,
     };
     const medicosCookie = getCookie('medicos') ? JSON.parse(getCookie('medicos') ) : [];
-    const existeMedico =medicosCookie.some(medico => medico.especialidadRequerida === datosMedico.especialidadRequerida);
+    const existeMedico =medicosCookie.some(medico => medico.especialidadMedico === datosMedico.especialidadMedico);
     if (existeMedico) {
         alert("Ya tenemos un medico con esa especialidad");
     } else {

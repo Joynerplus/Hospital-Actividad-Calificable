@@ -25,12 +25,12 @@ formularioPacientes.addEventListener('submit', (event) => {
 //Guardar en la cookie
 
 function guardarEnCookie (paciente) {
-    let datosPaciente = getCookie("pacientes");
-    if (datosPaciente === ""){
-        datosPaciente = "[]";
+    let datosPacient = getCookie("pacientes");
+    if (datosPacient === ""){
+        datosPacient = "[]";
     }
 
-    const pacientes = JSON.parse(datosPaciente);
+    const pacientes = JSON.parse(datosPacient);
     pacientes.push(paciente);
     const nuevoJSON = JSON.stringify(pacientes)
     setCookie ("pacientes", nuevoJSON);
@@ -39,18 +39,20 @@ function guardarEnCookie (paciente) {
 //Obtener los datos de la cookie
 
 function getCookie(nombre) {
-    const cookies = document.cookie.split(";");
-    for (let i=0; i < cookies.length; i++){
+    //separa las cookies y las guarda en un arreglo
+    const cookies = document.cookie.split("; ");
+    for (let i = 0; i < cookies.length; i++) {
         const cookie = cookies[i].split("=");
         if (cookie[0] === nombre) {
+            // devolver la infromacion de la cookie que se llama igual
             return decodeURIComponent(cookie[1]);
         }
     }
+    //devolver vacio si no encuentra cookie
     return "";
 }
 
-//Guardar datos en la cookie
-
-function setCookie (nombre, valor) {
+// Función para guardar datos en la cookie
+function setCookie(nombre, valor) {
     document.cookie = `${nombre}=${encodeURIComponent(valor)}`;
 }

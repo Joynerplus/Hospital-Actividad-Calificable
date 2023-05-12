@@ -10,18 +10,18 @@ for (let i = 0; i <medicosCookies.length; i++) {
     const celdaNombreMedico = fila.insertCell();
     const celdaApellido = fila.insertCell();
     const celdaCedula = fila.insertCell();
-    const celdaEspecialidadRequerida = fila.insertCell();
+    const celdaEspecialidadMedico = fila.insertCell();
     const celdaConsultorio = fila.insertCell();
     const celdaEmail = fila.insertCell();
 
     celdaNombreMedico.textContent = medico.nombreMedico;
     celdaApellido.textContent = medico.apellidoMedico;
     celdaCedula.textContent = medico.numeroCedula;
-    celdaEspecialidadRequerida.textContent = medico.especialidadRequerida;
+    celdaEspecialidadMedico.textContent = medico.especialidadMedico;
     celdaConsultorio.textContent = medico.numeroConsultorio
     celdaEmail.textContent = medico.email
 
-    let pacientesEncontrados = pacientesCookies.filter(paciente => medico.especialidadRequerida === paciente.especialidadRequerida);
+    let pacientesEncontrados = pacientesCookies.filter(paciente => medico.especialidadMedico === paciente.especialidadRequerida);
 
     const medicoPacientes = fila.insertCell();
     if(pacientesEncontrados.length > 0) {

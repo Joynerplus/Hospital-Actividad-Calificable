@@ -24,7 +24,7 @@ for (let i = 0; i <pacientesCookies.length; i++) {
     celdaTelefono.textContent = paciente.telefonoPaciente
     celdaEspecialidadRequerida.textContent = paciente.especialidadRequerida
 
-    const medicoEspecialidadRequerida = medicosCookie.find(medico => medico.celdaEspecialidadRequerida === paciente.especialidadRequerida);
+    const medicoEspecialidadRequerida = medicosCookie.find(medico => medico.especialidadMedico === paciente.especialidadRequerida);
     const celdaMedicoPaciente = fila.insertCell();
     celdaMedicoPaciente.textContent = medicoEspecialidadRequerida ? medicoEspecialidadRequerida.nombreMedico : "Por asignar";
 
