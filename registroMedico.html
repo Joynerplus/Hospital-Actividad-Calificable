@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro medicos</title>
+    <link rel="preload" href="/css/normalize.css" as="style">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <head>
+        <h1 class="titulo">Hospital Backend </h1>
+    </head>
+
+    <div class="nav-bg"> 
+        <nav class="nav-principal contenedor">
+            <a href="./registroMedico.html">Registro de medico </a>
+            <a href="./listadoMedicos.html">Listado de medicos</a>
+            <a href="/registroPacientes.html">Registro de pacientes </a>
+            <a href="./listadoPacientes.html">Listado de pacientes</a>
+        </nav>
+    </div>
+
+    <section>
+        <h2>Registro de medico</h2>
+
+        <form action="">
+            <fieldset>
+                <legend>Diligencie todos los datos solicitados</legend>
+
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre Medico" required>
+                </div>
+
+                <div>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                </div>
+
+                <div>
+                    <label for="cedula">Numero de cedula</label>
+                    <input type="text" id="cedula" name="cedula" placeholder="Numero de cedula" required>
+                </div>
+
+                <div>
+                    <label for="especialidad">Especialidad </label>
+                    <select id="especialidad" name="especialidad" required>                       
+                        <option value="Medicina general">Medicina general</option>
+                        <option value="Medicina interna">Cardiologia</option>
+                        <option value="Medicina veterinaria preventiva">Medicina Interna</option>
+                        <option value="Dermatología veterinaria">Dermatología</option>
+                        <option value="Cirugía veterinaria">Rehabilitación física</option>
+                        <option value="Veterinaria conductual">Psicología</option>
+                        <option value="Odontología veterinaria">Odontología</option>
+                        <option value="Farmacología veterinaria">Radiologia</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="consultorio">Numero de consultorio</label>
+                    <input type="number" id="consultorio" name="consultorio" placeholder="Numero de consultio" required>
+                </div>
+
+                <div>
+                    <label for="emal">Correo de contacto</label>
+                    <input type="email" id="email" name="email" placeholder="Ejemplo@hosback.com" required>
+                </div>
+                <div>
+                    <input class="boton" type="submit" value="Enviar">
+                </div>
+            </fieldset>
+        
+
+        </form>
+        
+    </section>
+
+    <div>
+        <input type="button" class="boton" id="botonVolver" value="Volver">
+    </div>
+    <script src="./JS/volver.js"></script>
+</body>
+</html>

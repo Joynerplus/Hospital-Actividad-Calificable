@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado Medicos </title>
+    <link rel="preload" href="/css/normalize.css" as="style">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <head>
+        <h1 class="titulo">Hospital Backend </h1>
+    </head>
+
+    <div class="nav-bg"> 
+        <nav class="nav-principal contenedor">
+            <a href="./registroMedico.html">Registro de medico </a>
+            <a href="./listadoMedicos.html">Listado de medicos</a>
+            <a href="./registroPacientes.html">Registro de pacientes </a>
+            <a href="./listadoPacientes.html">Listado de pacientes</a>
+        </nav>
+    </div>
+
+    <section>
+        <h2>Lista de medicos</h2>
+
+        <table id="listadoMedicos">            
+            <thead>
+                <tr>
+                    <th>Nombre del medico</th>
+                    <th>Apellido</th>
+                    <th>Numero de cedula</th>
+                    <th>Especialidad</th>
+                    <th>Consultorio</th>
+                    <th>Correo de contacto</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Se complementa de manera dinamica -->
+            </tbody>
+        </table>
+
+       
+        
+    </section>
+
+    <div>
+        <input type="button" class="boton" id="botonVolver" value="Volver">
+    </div>
+    <script src="./JS/volver.js"></script>
+</body>
+</html>
