@@ -42,13 +42,12 @@ body {
     width: 90%;
     text-align: center;    
 }
+.boton:hover {
+    background-color: var(--primario);
+}
 
 #botonVolver {
     margin-left: 46%;
-}
-
-.boton:hover {
-    background-color: var(--primario);
 }
 
 @media (min-width: 480px) {
@@ -63,8 +62,6 @@ body {
     padding: 2rem;
     border-radius: 1rem;
 }
-
-
 
 /* Tipografia */
 h1 {
@@ -188,3 +185,4 @@ th {
     background-color: var(--grisClaro);
     font-weight: bold;
 }
+
